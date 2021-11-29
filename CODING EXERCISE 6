@@ -1,0 +1,36 @@
+package exercise;
+
+import java.util.Scanner;
+
+public class Exercise5 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+		Scanner input = new Scanner(System.in);
+		int pass = 101010;
+		int counter = 1;
+
+        
+        System.out.println("Enter your password : ");
+        pass = input.nextInt();
+        
+        if(pass==101010)
+            System.out.println("Access granted");
+        
+        else {
+            do { // nak check bilangan letak do
+            if (pass!=123456) {
+                System.out.println("Please enter your password again : ");
+                pass = input.nextInt();
+            }
+            
+            counter++;
+            }
+            while(counter<3); 
+            
+            System.out.println("Access denied");
+        }
+	}
+
+}
